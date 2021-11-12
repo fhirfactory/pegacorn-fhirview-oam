@@ -6,6 +6,7 @@ import {
     TextField, 
     TextInput, 
     DateField,
+    DateInput,
     Filter,
     useListContext,
     TopToolbar,
@@ -22,9 +23,21 @@ export const SummaryList = props => {
 
     const TaskFilter = (props) => (
         <Filter {...props}>
+            <DateInput label="Start Date" source="startDate" alwaysOn />
+            <DateInput label="End Date" source="endDate" alwaysOn />
             <TextInput label="First Name" source="firstName" alwaysOn  />
+            <TextInput label="Last Name" source="lastName" alwaysOn  />
+            <TextInput label="Middle Name" source="middleName" alwaysOn  />
+            <TextInput label="Display Name" source="displayName" alwaysOn  />
+            <DateInput label="Date of Birth" source="dateOfBirth" alwaysOn />
             <TextInput label="MRN" source="mrn" alwaysOn />
             <TextInput label="AIP" source="aip" alwaysOn />
+            <TextInput label="Message ID" source="messageId" alwaysOn />
+            <TextInput label="Source Event Type" source="sourceEventType" alwaysOn />
+            {/* could these be dropdowns? */}
+            <TextInput label="Source System" source="sourceSystem" alwaysOn /> 
+            <TextInput label="Target System" source="targetSystem" alwaysOn />
+            
        </Filter>
     );
 
