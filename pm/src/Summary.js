@@ -1,24 +1,17 @@
 import React from 'react';
-import { cloneElement, useEffect, useRef } from "react";
 import { 
     List, 
     Datagrid, 
     TextField, 
     TextInput, 
-    DateField,
     DateInput,
     Filter,
-    useListContext,
-    TopToolbar,
-    CreateButton,
-    sanitizeListRestProps,
-    useRefresh,
 } from 'react-admin';
 
 
 export const SummaryList = props => {
     // const classes = useListStyles();
-    const refresh = useRefresh()
+    // const refresh = useRefresh()
     // useRecursiveTimeout(() => refresh(), listRefreshTimeout) 
 
     const TaskFilter = (props) => (
@@ -43,14 +36,14 @@ export const SummaryList = props => {
 
     return (
         <List 
-            {...props} 
+            empty={false}
+            {...props}
             filters={<TaskFilter />} 
             bulkActionButtons={false} 
-            sort={{ field: 'lastUpdated', order: 'DESC' }} 
             perPage={25}
         >
             <Datagrid rowClick="show">
-                <TextField source="taskId" label="Task ID" />
+                <TextField source="id" label="Task ID" />
                 <TextField source="taskFocus" label="Focus"/>
                 <TextField source="taskBeneficiary.given" label="First Name" />
                 <TextField source="taskBeneficiary.surname" label="Last Name" />

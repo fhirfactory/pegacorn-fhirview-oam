@@ -36,8 +36,12 @@ export const getHeadersToCallAPI = async (headers = null) => {
   })
 
 const App = () => (
-      <Admin dataProvider={dataProvider}>
-          <Resource name="PetasosTaskSummary" options={{label: 'Summary'}} show={TaskShow} list={SummaryList} />
+      
+      <Admin
+        title={AppTitle}
+        locale="en"
+        dataProvider={dataProvider}>
+          <Resource name='PetasosTaskSummary' options={{label: 'Summary'}} show={TaskShow} list={SummaryList} />
       </Admin>
   );
 export default App;
