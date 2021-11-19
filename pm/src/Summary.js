@@ -45,8 +45,7 @@ export const SummaryList = props => {
             <Datagrid rowClick="show">
                 <TextField source="id" label="Task ID" />
                 <TextField source="taskFocus" label="Focus"/>
-                <TextField source="taskBeneficiary.given" label="First Name" />
-                <TextField source="taskBeneficiary.surname" label="Last Name" />
+                <TextField source="taskBeneficiary" label="Beneficiary" />
                 <TextField source="taskEncounter" label="Encounter" />
                 <TextField source="taskJourney" label="Journey" />
                 <TextField source="taskStatus" label="Status" />
