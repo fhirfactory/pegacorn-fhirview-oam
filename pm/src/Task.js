@@ -39,11 +39,15 @@ export const TaskShow = (props) => {
                 </Tab>
                 <Tab label="Sub-tasks">
                     {/* TODO figure out a good way of displaying subtasks */}
-                    {/* <ArrayField source="subTasks">
+                    <ArrayField source="subTasks">
                         <Datagrid>
                             <TextField source="id" />
+                            <TextField source="taskJourney" /> 
+                            <TextField source="taskInput" />
+                            <TextField source="taskOutput" />
+                            <TextField source="taskFulfillmentLocation" />
                         </Datagrid>
-                    </ArrayField> */}
+                    </ArrayField>
                 </Tab>
             </TabbedShowLayout>
         </Show>
