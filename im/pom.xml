@@ -18,7 +18,7 @@
     <artifactId>pegacorn-fhirview-oam-im</artifactId>
     <packaging>jar</packaging>
 
-    <name>Pegacorn :: Fhirview :: OAM :: IM /name>
+    <name>Pegacorn :: Fhirview :: OAM :: IM </name>
     <description>Backend to the Fhirview OAM</description>
 
     <!--***********************************************************************************-->
