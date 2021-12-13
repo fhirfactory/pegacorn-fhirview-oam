@@ -5,7 +5,6 @@ import {
     Datagrid,
     TextField,
     TabbedShowLayout,
-    FunctionField,
     DateField,
     Tab,} from 'react-admin';
 
@@ -46,6 +45,8 @@ export const TaskShow = (props) => {
                             <TextField source="taskInput" />
                             <TextField source="taskOutput" />
                             <TextField source="taskFulfillmentLocation" />
+                            <TextField source="taskStatus" />
+                            <TextField source="taskStatusReason" />
                         </Datagrid>
                     </ArrayField>
                 </Tab>
